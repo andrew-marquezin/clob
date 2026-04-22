@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LegendaryBroccoli.Api/LegendaryBroccoli.Api.csproj" />
+    <Project Path="src/LegendaryBroccoli.Application/LegendaryBroccoli.Application.csproj" />
+    <Project Path="src/LegendaryBroccoli.Domain/LegendaryBroccoli.Domain.csproj" />
+    <Project Path="src/LegendaryBroccoli.Infrastructure/LegendaryBroccoli.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LegendaryBroccoli.Application.Tests/LegendaryBroccoli.Application.Tests.csproj" />
+  </Folder>
+</Solution>

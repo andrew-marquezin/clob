@@ -1,0 +1,6 @@
+@LegendaryBroccoli.Api_HostAddress = http://localhost:5156
+
+GET {{LegendaryBroccoli.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
