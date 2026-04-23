@@ -1,5 +1,5 @@
 using System.Collections.Concurrent;
-using LegendaryBroccoli.Application.Abstractions.Persistence;
+using LegendaryBroccoli.Domain.Abstractions;
 using LegendaryBroccoli.Domain.Entities;
 
 namespace LegendaryBroccoli.Infrastructure.Persistence;

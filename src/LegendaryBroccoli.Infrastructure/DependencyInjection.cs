@@ -1,4 +1,4 @@
-using LegendaryBroccoli.Application.Abstractions.Persistence;
+using LegendaryBroccoli.Domain.Abstractions;
 using LegendaryBroccoli.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 

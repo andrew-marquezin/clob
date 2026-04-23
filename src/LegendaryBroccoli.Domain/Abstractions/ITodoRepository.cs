@@ -1,6 +1,6 @@
 using LegendaryBroccoli.Domain.Entities;
 
-namespace LegendaryBroccoli.Application.Abstractions.Persistence;
+namespace LegendaryBroccoli.Domain.Abstractions;
 
 public interface ITodoRepository
 {

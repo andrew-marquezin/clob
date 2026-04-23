@@ -1,5 +1,5 @@
 using LegendaryBroccoli.Application.Abstractions.Messaging;
-using LegendaryBroccoli.Application.Abstractions.Persistence;
+using LegendaryBroccoli.Domain.Abstractions;
 using LegendaryBroccoli.SharedKernel;
 
 namespace LegendaryBroccoli.Application.Features.Todos.Queries;

@@ -1,6 +1,6 @@
-using LegendaryBroccoli.Application.Abstractions.Persistence;
 using LegendaryBroccoli.Application.Features.Todos.Commands;
 using LegendaryBroccoli.Application.Features.Todos.Queries;
+using LegendaryBroccoli.Domain.Abstractions;
 using LegendaryBroccoli.Domain.Entities;
 
 namespace LegendaryBroccoli.Application.Tests;
