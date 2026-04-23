@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Clob.Api/Clob.Api.csproj" />
+    <Project Path="src/Clob.Application/Clob.Application.csproj" />
+    <Project Path="src/Clob.Domain/Clob.Domain.csproj" />
+    <Project Path="src/Clob.Infrastructure/Clob.Infrastructure.csproj" />
+    <Project Path="src/Clob.SharedKernel/Clob.SharedKernel.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Clob.Application.Tests/Clob.Application.Tests.csproj" />
+  </Folder>
+</Solution>
