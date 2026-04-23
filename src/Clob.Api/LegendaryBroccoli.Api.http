@@ -1,0 +1,14 @@
+@LegendaryBroccoli.Api_HostAddress = http://localhost:5156
+
+POST {{LegendaryBroccoli.Api_HostAddress}}/todos
+Content-Type: application/json
+
+{
+  "title": "Minha tarefa"
+}
+###
+
+GET {{LegendaryBroccoli.Api_HostAddress}}/todos
+Accept: application/json
+
+###
