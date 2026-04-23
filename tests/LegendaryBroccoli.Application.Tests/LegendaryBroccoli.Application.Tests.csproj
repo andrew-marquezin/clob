@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\LegendaryBroccoli.Application\LegendaryBroccoli.Application.csproj" />
     <ProjectReference Include="..\..\src\LegendaryBroccoli.Domain\LegendaryBroccoli.Domain.csproj" />
+    <ProjectReference Include="..\..\src\LegendaryBroccoli.SharedKernel\LegendaryBroccoli.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>

@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\LegendaryBroccoli.Application\LegendaryBroccoli.Application.csproj" />
     <ProjectReference Include="..\LegendaryBroccoli.Infrastructure\LegendaryBroccoli.Infrastructure.csproj" />
+    <ProjectReference Include="..\LegendaryBroccoli.SharedKernel\LegendaryBroccoli.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>
