@@ -1,22 +1,10 @@
 namespace Clob.Domain.Entities;
 
-public class TodoItem
+public class TodoItem(Guid id, string title, bool isCompleted, DateTimeOffset createdAt) : EntityBase(id, createdAt)
 {
-    public TodoItem(Guid id, string title, bool isCompleted, DateTimeOffset createdAt)
-    {
-        Id = id;
-        Title = title;
-        IsCompleted = isCompleted;
-        CreatedAt = createdAt;
-    }
+    public string Title { get; } = title;
 
-    public Guid Id { get; }
-
-    public string Title { get; }
-
-    public bool IsCompleted { get; private set; }
-
-    public DateTimeOffset CreatedAt { get; }
+    public bool IsCompleted { get; private set; } = isCompleted;
 
     public void MarkAsCompleted() => IsCompleted = true;
 }
