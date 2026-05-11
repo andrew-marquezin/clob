@@ -17,7 +17,10 @@ public static class DependencyInjection
             .FromAssemblyOf<InfrastructureAssemblyMarker>()
             .AddClasses(classes => classes.AssignableTo<ITodoRepository>())
             .AsImplementedInterfaces()
-            .WithSingletonLifetime());
+            .WithSingletonLifetime()
+            .AddClasses(classes => classes.AssignableTo<IAccountRepository>())
+            .AsImplementedInterfaces()
+            .WithScopedLifetime());
 
         return services;
     }

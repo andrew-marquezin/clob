@@ -1,18 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <ProjectReference Include="..\Clob.Domain\Clob.Domain.csproj" />
-    <ProjectReference Include="..\Clob.SharedKernel\Clob.SharedKernel.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Clob.Domain\Clob.Domain.csproj"/>
+        <ProjectReference Include="..\Clob.SharedKernel\Clob.SharedKernel.csproj"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Scrutor" Version="4.2.2" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Scrutor" Version="4.2.2"/>
+    </ItemGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <ItemGroup>
+        <Folder Include="Features\Accounts\Commands\"/>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
 
 </Project>

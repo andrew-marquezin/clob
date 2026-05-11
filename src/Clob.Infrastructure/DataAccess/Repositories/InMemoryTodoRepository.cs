@@ -2,7 +2,7 @@ using System.Collections.Concurrent;
 using Clob.Domain.Abstractions;
 using Clob.Domain.Entities;
 
-namespace Clob.Infrastructure.Persistence;
+namespace Clob.Infrastructure.DataAccess.Repositories;
 
 public sealed class InMemoryTodoRepository : ITodoRepository
 {
@@ -20,8 +20,6 @@ public sealed class InMemoryTodoRepository : ITodoRepository
         return Task.FromResult(todo);
     }
 
-    public Task<IReadOnlyCollection<TodoItem>> ListAsync(CancellationToken cancellationToken = default)
-    {
-        return Task.FromResult<IReadOnlyCollection<TodoItem>>(_todos.Values.ToArray());
-    }
+    public Task<IReadOnlyCollection<TodoItem>> ListAsync(CancellationToken cancellationToken = default) =>
+        Task.FromResult<IReadOnlyCollection<TodoItem>>(_todos.Values.ToArray());
 }

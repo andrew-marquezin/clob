@@ -1,0 +1,19 @@
+services:
+  db: 
+    image: postgres
+
+    container_name: db-postgres
+
+    environment:
+      - POSTGRES_DB=limit_order_book
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=sample
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - db:/var/lib/postgresql
+
+volumes:
+    db:
