@@ -59,3 +59,8 @@ nunit-*.xml
 **/obj/
 **/TestResults/
 .vs/
+*.DotSettings.user
+
+# Catch literal "bin\Debug" folders caused by .NET cross-platform path bugs
+**/bin\\Debug/
+**/obj\\Debug/

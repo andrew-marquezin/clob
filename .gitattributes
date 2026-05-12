@@ -1,1 +1,10 @@
+# Auto detect text files and perform LF normalization
 * text=auto
+
+# Explicitly declare text files you want to always be normalized
+*.cs text diff=csharp
+*.csproj text merge=union
+*.sln text eol=crlf
+*.json text
+*.md text
+*.config text
