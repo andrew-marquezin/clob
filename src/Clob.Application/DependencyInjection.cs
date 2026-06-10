@@ -1,4 +1,7 @@
 using Clob.Application.Abstractions.Messaging;
+using Clob.Application.Behaviors;
+using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Clob.Application;
@@ -10,11 +13,15 @@ public static class DependencyInjection
         services.Scan(scan => scan
             .FromAssemblyOf<ApplicationAssemblyMarker>()
             .AddClasses(classes => classes.AssignableTo(typeof(ICommandHandler<,>)))
-                .AsImplementedInterfaces()
-                .WithTransientLifetime()
+            .AsSelfWithInterfaces()
+            .WithTransientLifetime()
             .AddClasses(classes => classes.AssignableTo(typeof(IQueryHandler<,>)))
-                .AsImplementedInterfaces()
-                .WithTransientLifetime());
+            .AsSelfWithInterfaces()
+            .WithTransientLifetime());
+
+        services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
+
+        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
         return services;
     }

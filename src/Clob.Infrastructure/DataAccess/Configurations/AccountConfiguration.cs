@@ -8,7 +8,7 @@ public sealed class AccountConfiguration : IEntityTypeConfiguration<Account>
 {
     public void Configure(EntityTypeBuilder<Account> builder)
     {
-        builder.ToTable("accounts");
+        builder.ToTable("Accounts");
         builder.HasKey(a => a.Id);
 
         builder.Property(a => a.BalanceBrl)
@@ -21,8 +21,8 @@ public sealed class AccountConfiguration : IEntityTypeConfiguration<Account>
 
         // Seeding
         builder.HasData(
-            new Account(Guid.Parse("11111111-1111-1111-1111-111111111111"), 10000m, 2.5m),
-            new Account(Guid.Parse("22222222-2222-2222-2222-222222222222"), 50000m, 0.5m)
+            new Account(Guid.Parse("11111111-1111-1111-1111-111111111111"), 2.5m, 10000m),
+            new Account(Guid.Parse("22222222-2222-2222-2222-222222222222"), 0.5m, 50000m)
         );
     }
 }

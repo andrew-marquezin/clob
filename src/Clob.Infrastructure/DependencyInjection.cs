@@ -13,12 +13,19 @@ public static class DependencyInjection
         services.AddDbContext<ClobDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("Database")));
 
+        services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ClobDbContext>());
+
         services.Scan(scan => scan
             .FromAssemblyOf<InfrastructureAssemblyMarker>()
-            .AddClasses(classes => classes.AssignableTo<ITodoRepository>())
+            // Automatically scan all classes ending with "Repository"
+            // If it's an InMemory repository, register as Singleton
+            .AddClasses(classes =>
+                classes.Where(type => type.Name.EndsWith("Repository") && type.Name.Contains("InMemory")))
             .AsImplementedInterfaces()
             .WithSingletonLifetime()
-            .AddClasses(classes => classes.AssignableTo<IAccountRepository>())
+            // Otherwise, register as Scoped (for EF Core repositories)
+            .AddClasses(classes =>
+                classes.Where(type => type.Name.EndsWith("Repository") && !type.Name.Contains("InMemory")))
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
